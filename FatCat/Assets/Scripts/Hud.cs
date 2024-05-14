@@ -11,7 +11,7 @@ public class Hud : MonoBehaviour
     private float _countingTime; // float in charge of updating both timers
 
     public bool Paused = false; //pauses everything, including character controls
-    [SerializeField] private GameObject _deathScreen;
+    [SerializeField] private GameObject _deathScreen; //upon falling to the void, screen shows up (Cat will be sleeping)
 
     private void Start()
     {
@@ -26,7 +26,7 @@ public class Hud : MonoBehaviour
     {
         _countingTime += Time.deltaTime; //adds onto an float to be used later
         TimeSpan time = TimeSpan.FromSeconds(_countingTime); //priotizes the seconds in _countingTime
-        _score.text = time.Seconds.ToString();
+        _score.text = time.Seconds.ToString(); //gives out the score to the player which is just seconds
         //_finishedScore.text = _countingTime.ToString(); //hidden until player dies
     }
 }

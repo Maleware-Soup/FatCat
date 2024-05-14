@@ -9,62 +9,73 @@ using UnityEngine.AI;
 public class Spawner : MonoBehaviour
 {
 
+    //Objects to spawn
     [SerializeField] private GameObject _floor;
-    [SerializeField] private GameObject _pickUp10;
-    [SerializeField] private GameObject _pickUp15;
-    [SerializeField] private GameObject _pickUp20;
-    [SerializeField] private Transform _floorFolder;
+    [SerializeField] private GameObject _pickUp10; //adds 10 to the score once implemented
+    [SerializeField] private GameObject _pickUp15; //adds 15 to the score once implemented
+    [SerializeField] private GameObject _pickUp20; //adds 20 to the score once implemented
+    [SerializeField] private Transform _folder; //keeps the hierarchy clean
 
 
-    private float _cameraDestination = 0.5F;
-    private int _constantFloorSpawn = 10;
+    //Floor spawning variables
+    private float _cameraDestination = 0.5F; //how far the camera has to go
+    private int _constantFloorSpawn = 10; //where the floor will be spawning
+    private int _spawnAmount = 0; //how long the curret floor should be (Randomized)
+    private int _spawnElevation = -5; //what height the floor should spawn at (Randomized)
+    private int _lastSpawnElevation = 0; //this is the first spawnelevation which is calculated with the second spawnelevation
+    private int _spawnAmountConstant = 0; //Spawn amount with an unchangable value, this is equal to the randomized spawn amount
+    private int _flipCoin = 0; //flip coin to see if pickups would spawn
+    private bool _firstObstacle; //checks to see if the spawn elevation is the same as the last spawn elevation.
 
-    private int _spawnAmount = 0;
-    private int _spawnElevation = -5;
-    private int _lastSpawnElevation = 0;
-    private int _spawnAmountConstant = 0;
-    private int _flipCoin = 0;
-    private bool _firstObstacle;
-
-    private List<GameObject> _floorPlacements = new List<GameObject>();
-    // Start is called before the first frame update
     void Awake()
     {
+        //starting floor, always the same
         for (int x = -9; x < 10; x++)
         {
-            Instantiate(_floor, new Vector2(x, -5), Quaternion.identity, _floorFolder);
+            Instantiate(_floor, new Vector2(x, -5), Quaternion.identity, _folder);
         }
     }
 
-    // Update is called once per frame
+
     void Update()
     {
-        
+        //checks if the camera passed the 0.5 checkpoint
         if (this.transform.position.x > _cameraDestination)
         {
+            //this renews all the varaiables for reuse.
             if(_spawnAmount < 0)
             {
                 _firstObstacle = true;
                 _lastSpawnElevation = _spawnElevation;
-                _spawnAmount = Random.Range(5,10);
+                _spawnAmount = Random.Range(3,11);
                 _spawnAmountConstant = _spawnAmount;
-                _spawnElevation = Random.Range(-2,-5);
-                _flipCoin = Random.Range(0,2);
+                _spawnElevation = Random.Range(-3,-5);
+                _flipCoin = Random.Range(-3,4);
             }
-            _spawnAmount --;            
-            _cameraDestination ++;
+            _spawnAmount --; //every loop, minus one from the spawn amount 
+            _cameraDestination ++; 
             if(_spawnAmount >= 0)
             {
-                Instantiate(_floor, new Vector2(_constantFloorSpawn, _spawnElevation), Quaternion.identity, _floorFolder);
+                Instantiate(_floor, new Vector2(_constantFloorSpawn, _spawnElevation), Quaternion.identity, _folder); //this is the floor
 
-                if(_spawnAmount <= _spawnAmountConstant - 4 && _flipCoin == 1)
+                //this spawns in the pickups
+                if(_spawnAmount <= _spawnAmountConstant - 10 && _flipCoin == 3) //checks to see if the 20 pickup is able to spawn
                 {
-                    Instantiate(_pickUp10, new Vector2(_constantFloorSpawn, _spawnElevation + 1), Quaternion.identity, _floorFolder);
+                    Instantiate(_pickUp20, new Vector2(_constantFloorSpawn, _spawnElevation + 1), Quaternion.identity, _folder); 
                 }
-
+                else if(_spawnAmount <= _spawnAmountConstant - 8 && _flipCoin >= 2)//checks to see if the 15 pickup is able to spawn
+                {
+                    Instantiate(_pickUp15, new Vector2(_constantFloorSpawn, _spawnElevation + 1), Quaternion.identity, _folder);
+                }
+                else if(_spawnAmount <= _spawnAmountConstant - 5 &&_flipCoin >= 1)//checks to see if the 10 pickup is able to spawn
+                {
+                    Instantiate(_pickUp10, new Vector2(_constantFloorSpawn, _spawnElevation + 1), Quaternion.identity, _folder);
+                }
+               
+                //if elevation is same as the last elevation, spawn a obstacle to prevent player from gliding over the hole
                 if(_spawnElevation == _lastSpawnElevation && _firstObstacle == true)
                 {
-                    Instantiate(_floor, new Vector2(_constantFloorSpawn, _spawnElevation + 1), Quaternion.identity, _floorFolder);
+                    Instantiate(_floor, new Vector2(_constantFloorSpawn, _spawnElevation + 1), Quaternion.identity, _folder);
                     _firstObstacle = false;
                 }
             }

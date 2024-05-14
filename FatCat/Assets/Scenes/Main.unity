@@ -712,9 +712,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _floor: {fileID: 8132685556807794732, guid: e81193ccb1860fe4ebd645d4ac6b4674, type: 3}
   _pickUp10: {fileID: 3587045159596689025, guid: a863e4d0ccca0494ba56f0a379fb1083, type: 3}
-  _pickUp15: {fileID: 0}
-  _pickUp20: {fileID: 0}
-  _floorFolder: {fileID: 450563800}
+  _pickUp15: {fileID: 3587045159596689025, guid: 9f37a7e40a03a0948a4d44276024929d, type: 3}
+  _pickUp20: {fileID: 3587045159596689025, guid: df10a75e7009c3c4daf26815a3db1394, type: 3}
+  _folder: {fileID: 0}
 --- !u!114 &1290102149
 MonoBehaviour:
   m_ObjectHideFlags: 0
