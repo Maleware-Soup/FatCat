@@ -46,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -195,14 +195,18 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Barcik-Sheet_0: -6629706471658538457
+      Barcik-Sheet_1: -114891068982690324
+      Barcik-Sheet_2: 783602242378726776
+      Barcik-Sheet_3: -326167219337773335
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
