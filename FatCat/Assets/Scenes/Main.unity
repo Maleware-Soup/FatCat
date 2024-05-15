@@ -242,7 +242,6 @@ GameObject:
   - component: {fileID: 472543211}
   - component: {fileID: 472543210}
   - component: {fileID: 472543214}
-  - component: {fileID: 472543215}
   - component: {fileID: 472543216}
   m_Layer: 0
   m_Name: Player
@@ -406,23 +405,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpSpeed: 8
---- !u!111 &472543215
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 472543209}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Animation: {fileID: 7400000, guid: 97fdeb0ab6dc5f44288163764d6591a8, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: 97fdeb0ab6dc5f44288163764d6591a8, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_UpdateMode: 0
-  m_CullingType: 0
 --- !u!95 &472543216
 Animator:
   serializedVersion: 7
@@ -752,7 +734,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _floor: {fileID: 8132685556807794732, guid: e81193ccb1860fe4ebd645d4ac6b4674, type: 3}
-  _pickUp10: {fileID: 3587045159596689025, guid: a863e4d0ccca0494ba56f0a379fb1083, type: 3}
+  _pickUp10: {fileID: 3587045159596689025, guid: 8005eb19d330c1e43bc73f4c41b285e1, type: 3}
   _pickUp15: {fileID: 3587045159596689025, guid: 9f37a7e40a03a0948a4d44276024929d, type: 3}
   _pickUp20: {fileID: 3587045159596689025, guid: df10a75e7009c3c4daf26815a3db1394, type: 3}
   _folder: {fileID: 0}
