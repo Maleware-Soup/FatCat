@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Cat_Running
+  m_Name: Milk
   serializedVersion: 7
   m_Legacy: 1
   m_Compressed: 0
@@ -21,13 +21,17 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: -6629706471658538457, guid: 8b3b4edce810efd47bcc5f5156762f98, type: 3}
-    - time: 0.05
-      value: {fileID: -114891068982690324, guid: 8b3b4edce810efd47bcc5f5156762f98, type: 3}
-    - time: 0.1
-      value: {fileID: 783602242378726776, guid: 8b3b4edce810efd47bcc5f5156762f98, type: 3}
-    - time: 0.15
-      value: {fileID: -326167219337773335, guid: 8b3b4edce810efd47bcc5f5156762f98, type: 3}
+      value: {fileID: -2753587033470535768, guid: b82857e65da50134a97e7c06404e520f, type: 3}
+    - time: 0.13333334
+      value: {fileID: 9061411065055286993, guid: b82857e65da50134a97e7c06404e520f, type: 3}
+    - time: 0.26666668
+      value: {fileID: 3634036042519969842, guid: b82857e65da50134a97e7c06404e520f, type: 3}
+    - time: 0.4
+      value: {fileID: 713702755655637856, guid: b82857e65da50134a97e7c06404e520f, type: 3}
+    - time: 0.53333336
+      value: {fileID: -7852176447744386666, guid: b82857e65da50134a97e7c06404e520f, type: 3}
+    - time: 0.6666667
+      value: {fileID: -6127255793164015584, guid: b82857e65da50134a97e7c06404e520f, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -46,7 +50,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.16666667
+    m_StopTime: 0.68333334
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

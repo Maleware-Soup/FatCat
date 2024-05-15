@@ -52,7 +52,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -250,7 +250,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Milk Sprite Sheet-Sheet_0: -2753587033470535768
+      Milk Sprite Sheet-Sheet_1: 9061411065055286993
+      Milk Sprite Sheet-Sheet_2: 3634036042519969842
+      Milk Sprite Sheet-Sheet_3: 713702755655637856
+      Milk Sprite Sheet-Sheet_4: -7852176447744386666
+      Milk Sprite Sheet-Sheet_5: -6127255793164015584
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
