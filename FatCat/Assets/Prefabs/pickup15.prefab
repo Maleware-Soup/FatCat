@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6487140189666171374}
   - component: {fileID: 1658741149768327564}
   - component: {fileID: 8333963199750262860}
+  - component: {fileID: 6898706106830834600}
   m_Layer: 0
   m_Name: pickup15
   m_TagString: Untagged
@@ -147,3 +148,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camPosition: {fileID: 0}
+--- !u!114 &6898706106830834600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3587045159596689025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6eb0576f6befe14891219c865a24638, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
