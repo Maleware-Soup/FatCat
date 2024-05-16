@@ -386,7 +386,7 @@ Transform:
   m_GameObject: {fileID: 472543209}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.6267, y: -3.2416, z: 10}
+  m_LocalPosition: {x: -6.6267, y: -3.2416, z: 0}
   m_LocalScale: {x: 5.3926744, y: 5.3926744, z: 5.3926744}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -462,6 +462,7 @@ MonoBehaviour:
   _score: {fileID: 166305873}
   _finishedScore: {fileID: 863112522}
   Paused: 0
+  scoreAddon: 0
   _deathScreen: {fileID: 0}
 --- !u!114 &629907797
 MonoBehaviour:
@@ -714,7 +715,7 @@ Transform:
   m_GameObject: {fileID: 1290102144}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

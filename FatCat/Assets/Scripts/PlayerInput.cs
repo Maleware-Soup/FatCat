@@ -9,11 +9,14 @@ public class PlayerInput : MonoBehaviour
 
     private bool _isGrounded = true;
 
+    private Animator animator;
+
     private Rigidbody2D player;
     // Start is called before the first frame update
     void Start()
     {
         player = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -29,7 +32,12 @@ public class PlayerInput : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Floor"))
         {
-            _isGrounded = true;
+            Vector3 normal = other.GetContact(0).normal;
+            if(normal == Vector3.up)
+            {
+                animator.SetBool("_isGrounded", true);
+                _isGrounded = true;
+            }
         }
     }
 
@@ -37,6 +45,7 @@ public class PlayerInput : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Floor"))
         {
+            animator.SetBool("_isGrounded", false);
             _isGrounded = false;
         }
     }
