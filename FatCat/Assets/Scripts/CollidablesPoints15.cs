@@ -2,17 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CollidablesPoints15 : MonoBehaviour
+public class CollidablesPoints15 : Colidables
 {
-    // Start is called before the first frame update
-    void Start()
+    protected override void OnTouch(Hud h)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        h.scoreAddon += 15;
+        h.PointAddOn();
+        Destroy(this.gameObject);
     }
 }

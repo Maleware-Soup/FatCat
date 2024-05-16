@@ -6,7 +6,7 @@ public class CollidablesPoints10 : Colidables
 {
     protected override void OnTouch(Hud h)
     {
-        h.scoreAddon += 15;
+        h.scoreAddon += 10;
         h.PointAddOn();
         Destroy(this.gameObject);
     }

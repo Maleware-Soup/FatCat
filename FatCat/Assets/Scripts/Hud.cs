@@ -35,5 +35,6 @@ public class Hud : MonoBehaviour
     public void PointAddOn()
     {
         _countingTime += scoreAddon;
+        scoreAddon = 0;
     }
 }

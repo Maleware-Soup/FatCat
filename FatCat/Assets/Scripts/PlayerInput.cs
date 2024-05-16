@@ -15,15 +15,12 @@ public class PlayerInput : MonoBehaviour
 
     public LayerMask groundlayer = 1<<3;
 
-    private List<Collider2D> test = new List<Collider2D>();
-    // Start is called before the first frame update
     void Start()
     {
         player = GetComponent<Rigidbody2D>();
         animator = GetComponentInParent<Animator>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         _isGrounded = Physics2D.Raycast(transform.position, -Vector2.up, 1f, groundlayer);
