@@ -4,17 +4,18 @@ using System.Linq;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.AI;
 
 public class Spawner : MonoBehaviour
 {
 
     //Objects to spawn
     [SerializeField] private GameObject _floor;
+    [SerializeField] private GameObject _obstacle;
     [SerializeField] private GameObject _pickUp10; //adds 10 to the score once implemented
     [SerializeField] private GameObject _pickUp15; //adds 15 to the score once implemented
     [SerializeField] private GameObject _pickUp20; //adds 20 to the score once implemented
     [SerializeField] private Transform _folder; //keeps the hierarchy clean
+    
 
 
     //Floor spawning variables
@@ -75,7 +76,7 @@ public class Spawner : MonoBehaviour
                 //if elevation is same as the last elevation, spawn a obstacle to prevent player from gliding over the hole
                 if(_spawnElevation == _lastSpawnElevation && _firstObstacle == true)
                 {
-                    Instantiate(_floor, new Vector2(_constantFloorSpawn, _spawnElevation + 1), Quaternion.identity, _folder);
+                    Instantiate(_obstacle, new Vector2(_constantFloorSpawn, _spawnElevation + 1), Quaternion.Euler(0, 0, 90), _folder);
                     _firstObstacle = false;
                 }
             }

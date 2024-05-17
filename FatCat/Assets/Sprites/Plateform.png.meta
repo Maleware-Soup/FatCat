@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: 9b409b2fe7bbb75489f1ef2dc0d90316
+guid: fd2d1ef02bca2b845b9e6d55be21541a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9145325598964299397
-    second: BarcikSleep-Sheet_0
-  - first:
-      213: -2089327530554040064
-    second: BarcikSleep-Sheet_1
-  - first:
-      213: 9139115220478683804
-    second: BarcikSleep-Sheet_2
-  - first:
-      213: -7302556189048329370
-    second: BarcikSleep-Sheet_3
+      213: -4548724811837343012
+    second: Platform-export_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -122,85 +113,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BarcikSleep-Sheet_0
+      name: Platform-export_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 11
-        width: 18
-        height: 10
+        x: 98
+        y: 16
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b79427e52d6451180800000000000000
-      internalID: -9145325598964299397
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BarcikSleep-Sheet_1
-      rect:
-        serializedVersion: 2
-        x: 39
-        y: 11
-        width: 18
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 001e1e14ea73103e0800000000000000
-      internalID: -2089327530554040064
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BarcikSleep-Sheet_2
-      rect:
-        serializedVersion: 2
-        x: 71
-        y: 11
-        width: 18
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c9a6ff53fd8a4de70800000000000000
-      internalID: 9139115220478683804
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BarcikSleep-Sheet_3
-      rect:
-        serializedVersion: 2
-        x: 103
-        y: 11
-        width: 18
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 66ba17f26db18aa90800000000000000
-      internalID: -7302556189048329370
+      spriteID: cdafd6142eeafd0c0800000000000000
+      internalID: -4548724811837343012
       vertices: []
       indices: 
       edges: []
@@ -208,7 +136,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 0b64a834f5938df429614d128501dec3
     internalID: 0
     vertices: []
     indices: 
@@ -216,10 +144,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      BarcikSleep-Sheet_0: -9145325598964299397
-      BarcikSleep-Sheet_1: -2089327530554040064
-      BarcikSleep-Sheet_2: 9139115220478683804
-      BarcikSleep-Sheet_3: -7302556189048329370
+      Platform-export_0: -4548724811837343012
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

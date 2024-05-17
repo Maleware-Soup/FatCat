@@ -1,8 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.VersionControl;
 using UnityEngine;
-using UnityEngine.SocialPlatforms.Impl;
 
 public class Colidables : MonoBehaviour
 {
@@ -15,9 +13,8 @@ public class Colidables : MonoBehaviour
 
     protected virtual void OnTouch(Hud h)
     {
-        h.PointAddOn();
-
         Destroy(this.gameObject);
+        h.PointAddOn();
     }
 
 }
