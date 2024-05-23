@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraMovement : MonoBehaviour
 {
 
-    private float movingSpeed = 4F; //how fast the game is going right
+    public float movingSpeed = 4F; //how fast the game is going right
     // Start is called before the first frame update
     void Start()
     {

@@ -5,23 +5,20 @@ using UnityEngine.InputSystem;
 
 public class PlayerInput : MonoBehaviour
 {
-    public float jumpSpeed = 8f;
+    private float jumpSpeed = 8f;
 
     public bool _isGrounded = true;
 
     public bool _isDead = false;
     private Animator animator;
     private Rigidbody2D player;
-
     public LayerMask groundlayer = 1<<3;
 
-    private Hud hud;
 
     void Start()
     {
         player = GetComponent<Rigidbody2D>();
         animator = GetComponentInParent<Animator>();
-        hud = Object.FindAnyObjectByType<Hud>();
 
         _isDead = false;
     }

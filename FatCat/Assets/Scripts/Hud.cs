@@ -15,14 +15,19 @@ public class Hud : MonoBehaviour
     private bool Paused = true; //pauses everything, including character controls
 
     public float scoreAddon;
-
+    private int pointDestination = 300; //Every 200 points, increase speed
 
     private PlayerInput player;
+    private AudioSource _audioSwitch;
+    [SerializeField] private AudioClip _coinPickUpSound;
+    private CameraMovement increaseInSpeed; //Increases the speed once the player reaches a certain score
     
 
     private void Start()
     {
-        player = GameObject.FindAnyObjectByType<PlayerInput>();
+        player = FindAnyObjectByType<PlayerInput>();
+        increaseInSpeed = FindAnyObjectByType<CameraMovement>();
+        _audioSwitch = FindAnyObjectByType<PlayerInput>().GetComponent<AudioSource>();
 
         Time.timeScale = 0f;
         Cursor.lockState = CursorLockMode.Locked; //locks cursor
@@ -35,9 +40,13 @@ public class Hud : MonoBehaviour
     private void Update()
     {
         _countingTime += 1f * Time.deltaTime; //adds onto an float to be used later
-        //TimeSpan time = TimeSpan.FromSeconds(_countingTime); //priotizes the seconds in _countingTime
         _score.text = ((int)_countingTime).ToString(); //gives out the score to the player which is just seconds
         _finishedScore.text = ((int)_countingTime).ToString(); //hidden until player dies
+        if(int.Parse(_score.text) >= pointDestination && pointDestination != 300 * 3)
+        {
+            pointDestination += 300;
+            increaseInSpeed.movingSpeed += 1.5f;
+        }
 
         if(Paused == true && Input.GetKey(KeyCode.Space))
         {
@@ -60,6 +69,7 @@ public class Hud : MonoBehaviour
 
     public void PointAddOn()
     {
+        _audioSwitch.PlayOneShot(_coinPickUpSound);
         _countingTime += scoreAddon;
         scoreAddon = 0;
     }
